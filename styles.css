@@ -1,91 +1,119 @@
 /* General Styles */
-body {
-  font-family: 'Roboto', sans-serif;
+body, html {
   margin: 0;
   padding: 0;
-  background-color: #f0f4f8;
-}
-
-.site-header {
-  background-color: #343a40;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-.navbar {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: column;
+}
+
+/* Full-Screen Background */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.full-background {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+/* Header Styles */
+.site-header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 .nav-link {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  padding: 0 1rem;
   font-size: 1.2rem;
 }
 
-.landing-page {
-  padding: 2rem;
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-.welcome {
+/* Landing Page Content */
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
   text-align: center;
+  padding-top: 5rem;
 }
 
-.welcome h1 {
-  font-size: 2.5rem;
-  color: #333;
+.landing-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-.welcome p {
-  font-size: 1.2rem;
-  color: #555;
+.landing-content p {
+  font-size: 1.5rem;
+  max-width: 800px;
 }
 
-/* Bot Drawer */
+/* Bot Drawer Section */
 .bot-drawer {
-  margin: 2rem 0;
-  text-align: center;
+  margin-top: 2rem;
 }
 
 .drawer-button {
-  background-color: #007bff;
-  color: white;
   padding: 1rem 2rem;
+  background-color: #0288d1;
+  color: white;
   border: none;
-  font-size: 1.2rem;
-  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1.2rem;
 }
 
 .drawer-button:hover {
-  background-color: #0056b3;
+  background-color: #0277bd;
 }
 
 .drawer {
   display: flex;
-  justify-content: space-around;
-  padding: 1rem;
+  gap: 2rem;
+  margin-top: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
 }
 
-.drawer.hidden {
-  display: none;
+.drawer.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .bot-card {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 1rem;
+  text-align: center;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  width: 30%;
-  transition: transform 0.3s;
+  width: 200px;
 }
 
-.bot-card:hover {
-  transform: translateY(-10px);
+.bot-card p {
+  color: white;
+  margin-top: 1rem;
 }
 
 .bot-image {
@@ -93,39 +121,96 @@ body {
   border-radius: 8px;
 }
 
-.feed-item {
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
-}
-
-.feed-image {
-  width: 30%;
-  border-radius: 8px;
-}
-
-.feed-description {
-  padding-left: 2rem;
-}
-
-.feed-description h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.feed-description p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
-/* Footer */
-footer {
-  background-color: #343a40;
-  color: white;
-  padding: 1rem;
+/* Performance Summary Section */
+.performance-summary {
+  margin-top: 4rem;
   text-align: center;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+}
+
+.performance-summary h2 {
+  font-size: 2rem;
+}
+
+.performance-details {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Page-Specific Styling */
+.about-content, .bots-content, .order-content {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.about-content h2, .bots-content h2, .order-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p, .bots-content p, .order-content p {
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+}
+
+.about-team, .bots-list, .order-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Team Members */
+.team-member {
+  width: 200px;
+  text-align: center;
+  color: white;
+}
+
+.team-member img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Bot Cards */
+.bot-card {
+  width: 250px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Order Page Steps */
+.order-step {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  width: 250px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 2rem;
+  }
+
+  .landing-content p {
+    font-size: 1.2rem;
+  }
+
+  .drawer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-team, .bots-list, .order-steps {
+    flex-direction: column;
+  }
     }
   
