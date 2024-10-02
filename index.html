@@ -3,55 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trading Bot Performance</title>
+  <title>Trading Bots Overview</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
+  <!-- Full-Screen Background -->
+  <div class="background-image">
+    <img src="assets/images/background.jpg" alt="Background" class="full-background">
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header full-width">
     <nav class="navbar">
       <a href="index.html" class="nav-link">Home</a>
       <a href="about.html" class="nav-link">About</a>
       <a href="bots.html" class="nav-link">Bots</a>
+      <a href="order.html" class="nav-link">Order</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main class="landing-page">
-    <section class="welcome">
-      <h1>Welcome to Our Trading Bot Performance Showcase</h1>
-      <p>Track the performance of our advanced bots and optimize your trading strategies.</p>
-    </section>
+  <!-- Landing Page Content -->
+  <main class="landing-content full-screen">
+    <h1>Welcome to Our Trading Bots Platform</h1>
+    <p>We provide cutting-edge automated trading solutions to maximize your profitability.</p>
 
-    <!-- Drawer for images -->
+    <!-- Drawer with Bot Images -->
     <section class="bot-drawer">
-      <button id="drawer-toggle" class="drawer-button">Show Bots</button>
+      <button id="drawer-toggle" class="drawer-button">View Bots</button>
       <div id="drawer-content" class="drawer hidden">
         <div class="bot-card">
           <img src="assets/images/bot1.jpg" alt="Bot 1" class="bot-image">
-          <p>Bot 1 - High frequency trading performance</p>
+          <p>Bot 1 - High-Frequency Trading</p>
         </div>
         <div class="bot-card">
           <img src="assets/images/bot2.jpg" alt="Bot 2" class="bot-image">
-          <p>Bot 2 - Machine learning trading strategy</p>
+          <p>Bot 2 - AI-Based Strategy</p>
         </div>
         <div class="bot-card">
           <img src="assets/images/bot3.jpg" alt="Bot 3" class="bot-image">
-          <p>Bot 3 - AI-powered trade analysis</p>
+          <p>Bot 3 - Machine Learning Powered</p>
         </div>
       </div>
     </section>
 
-    <!-- Main Feed -->
-    <section class="bot-feed">
-      <div class="feed-item">
-        <img src="assets/images/bot1.jpg" alt="Bot 1" class="feed-image">
-        <div class="feed-description">
-          <h2>Bot 1 - HFT Strategy</h2>
-          <p>Performance: +10% over the past month. This bot uses a high frequency trading strategy designed for quick entry and exit in the forex market.</p>
-        </div>
+    <!-- Performance Summary -->
+    <section class="performance-summary">
+      <h2>Bot Performance Overview</h2>
+      <div class="performance-details">
+        <p>Our bots have achieved an average of 12% monthly returns, utilizing a variety of strategies from AI to high-frequency trading.</p>
       </div>
     </section>
   </main>
